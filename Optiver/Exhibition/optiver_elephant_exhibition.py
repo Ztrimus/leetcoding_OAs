@@ -84,7 +84,7 @@ sol.elephantLeft(13, 310)
 print(sol.getBiggestElephants(13))
 sol.elephantLeft(15, 300)
 print(sol.getBiggestElephants(16))
-sol.elephantLeft(16, 310)
-sol.elephantLeft(20, 310)
+sol.elephantLeft(16, 200)
+sol.elephantLeft(20, 250)
 
 sol = Q1
