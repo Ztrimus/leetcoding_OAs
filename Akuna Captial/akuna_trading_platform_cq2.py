@@ -1,3 +1,12 @@
+'''
+Filename: akuna_trading_platform_cq2.py
+Path: /home/saurabh/AAA/Focusing/Coding/intern-assessment-2023/Akuna Captial
+Created Date: Wednesday, September 13th 2023, 7:28:01 pm
+Author: Saurabh Zinjad
+
+Copyright (c) 2023 Your Company
+'''
+
 import os 
 from collections import defaultdict
 
