@@ -30,9 +30,6 @@ start = [1, 8, 3, 9, 6]
 end = [7, 9, 6, 14, 71]
 print(getMinMachines(start, end))  # Output: 3
 
-1,3,6,8,9
-7,6,71,9,14
-
 # Example usage
 start = [2,2,2,2]
 end = [5,5,5,5]
