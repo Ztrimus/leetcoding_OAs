@@ -15,7 +15,8 @@ class LionSchedule:
 
 class LionCompetition:
     def __init__(self, lions: list[LionDescription], schedule: list[LionSchedule]):
-        self.sizeMap = {name: height for name,height in lions}
+        # self.sizeMap = dict(name: height for name,height in lions}
+        self.sizeMap = dict((lion.name, lion.height) for lion in lions)
         self.mine = set()
         
         self.ignoreMap = defaultdict(int)
@@ -27,7 +28,7 @@ class LionCompetition:
         # schedule sorted by time of enter/leaving
         self.schedule = []
         for event in schedule:
-            name, enter, exit = event
+            name, enter, exit = event.name, event.enter_time, event.exit_time
             self.schedule.append((name, enter, "enter"))
             self.schedule.append((name, exit, "exit"))
             self.ignoreMap[(self.sizeMap[name], enter, "enter")] += 1
@@ -52,6 +53,7 @@ class LionCompetition:
             self.othersLeft[height] += 1
 
     def get_biggest_lions(self):
+        print('-'*50, time)
         while self.si < len(self.schedule) and self.schedule[self.si][1] <= time:
             name, _, type = self.schedule[self.si]
             if type == "enter":
