@@ -1,0 +1,14 @@
+SELECT
+  referrer_tld,
+  COUNT(*) AS total_events,
+  SUM(amount) AS total_amount
+FROM
+(
+  SELECT
+    CONCAT(SUBSTRING_INDEX(referrer, '.', 1), '.*') AS referrer_tld,
+    amount
+  FROM
+    events
+) t
+GROUP BY referrer_tld
+ORDER BY referrer_tld;
