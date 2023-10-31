@@ -6,10 +6,12 @@ def solution(requests, totalslots):
         count = 0
         for i in range(start, start + totalslots):
             index = i % totalslots
+            if count == 0:
+                a = index
             if memory[index] == 0:
                 count += 1
-                if count == int(request[2]):
-                    return i - int(request[2]) + 1
+                if count == int(b):
+                    return a
             else:
                 count = 0
         return -1
@@ -33,3 +35,10 @@ def solution(requests, totalslots):
             result.append(int(b))
 
     return result
+totalslots = 15
+requests = [ ["store", "0", "6"],
+            ["store", "11", "3"],
+            ["free", "0", "3"],
+            ["store", "10", "3"],
+            ["store", "6", "6"]]
+print(solution(requests, totalslots))
