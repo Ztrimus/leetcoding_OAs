@@ -1,0 +1,32 @@
+/*
+ * -----------------------------------------------------------------------
+ * Author: Saurabh Zinjad
+ * Developer Email: zinjadsaurabh1997@gmail.com
+ * File: q2_question.txt
+ * Creation Time: Oct 31st 2023 12:34 pm
+ * Copyright (c) 2023 Saurabh Zinjad. All rights reserved | GitHub: Ztrimus
+ * -----------------------------------------------------------------------
+ */
+
+Codowniting
+DESC
+Given an array of strings
+schedule that represents the schedule of bus arrival times and a string time that represents the current time, find
+out how long you have to wait for the next bus. If there are no more buses scheduled for the day, return
+HISTORY
+Time is represented as a string in the form of HH:MM (in the 24-hour format). Bus arrival times are sorted in chronological order.
+Please assume that the bus leaves at the same time that it arrives. So, if a bus was scheduled to come before the current time, it has already left.
+RULES
+Note: You are not expected to provide the most optimal solution, but a solution with time complexity not worse than 0(schedule. Tength x MINUTES IN DAY will fit within the execution time limit.
+README
+Example
+SETTINGS
+• For schedule = ["12:30", "14:00", "19:55"] and time = "14:30", the output should be solution (schedule, time)"05:25"
+The 14:00 bus has already left, so the next bus arrives at 19:55, and the duration of waiting from "14:30" to 19:55 is "05:25"
+• For schedule = ["12:30", "14:00", "19:55"] and time = "20:00", the output should be solution(schedule, time) = "-1".
+The last bus for the day has already left, so the answer is
+"-1"
+• For schedule = C"12:30",
+"14:00", "19:55"] and time = "14:00", the output should be solution(schedule, time) =
+"00:00"
+The nextibus arrives richt now (at time ) so the duration of wait 
