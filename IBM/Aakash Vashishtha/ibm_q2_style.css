@@ -1,0 +1,65 @@
+/*
+ * -----------------------------------------------------------------------
+ * File: ibm_q1_style.css
+ * Creation Time: Nov 2nd 2023 12:06 am
+ * Author: Saurabh Zinjad
+ * Developer Email: zinjadsaurabh1997@gmail.com
+ * Copyright (c) 2023 Saurabh Zinjad. All rights reserved | GitHub: Ztrimus
+ * -----------------------------------------------------------------------
+ */
+
+ .header {
+    width: 400px;
+    height: 100px;
+  }
+  
+  .footer {
+    width: 400px;
+    height: 100px;
+  }
+  
+  .sidebar {
+    width: 100px;
+    height: 300px;
+  }
+  
+  .article {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .content {
+    display: flex;
+  }
+  
+  .layout {
+    display: inline-flex;
+  }
+  
+  .content {
+    display: flex;
+  }
+  
+  .right {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .left {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .aside-1 {
+    width: 100px;
+    height: 167px;
+  }
+  
+  .aside-2 {
+    width: 100px;
+    height: 167px;
+  }
+  
+  .aside-3 {
+    width: 100px;
+    height: 167px;
+  }
