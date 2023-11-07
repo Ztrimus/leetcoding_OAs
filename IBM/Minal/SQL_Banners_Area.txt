@@ -1,0 +1,11 @@
+SELECT
+    c.name AS city,
+    COUNT(b.city_id) AS banners,
+    MIN(b.width * b.height) AS min_area,
+    CEIL(AVG(b.width * b.height)) AS avg_area,
+    MAX(b.width * b.height) AS max_area,
+    SUM(b.width * b.height) AS total_area
+FROM cities c
+LEFT JOIN banners b ON c.id = b.city_id
+GROUP BY c.name
+ORDER BY c.name ASC;
