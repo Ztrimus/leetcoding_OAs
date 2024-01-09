@@ -1,0 +1,52 @@
+'''
+File: tiktok_kunal.txt
+Project: Coding
+File Created: 14th Oct 2023 11:36 pm, Saturday
+Author: Saurabh Zinjad (GitHub: Ztrimus)
+Email: zinjadsaurabh1997@gmail.com
+
+Copyright (c) 2023 Saurabh Zinjad
+'''
+
+QUESTION 1 - OPTION 2 - UNSAFE STATE <======> QUESTION 2 - OPTION 1 - Semaphores
+Q5 --------------------------------New Algorithm -------------------------------
+import collections
+
+def newAlogFun(arr):
+    idx = collections.defaultdict(list)
+    n = len(arr)
+    for i,j in enumerate(arr):
+        idx[j]+=[i]
+        
+    res=[float('inf')]*n
+        
+    for num in idx:
+        x=[-1]+idx[num]+[n]
+        y=max(j-i for i,j in zip(x[:-1],x[1:]))
+        res[y-1]=min(res[y-1],num)
+            
+    for i in range(1,n):
+        res[i]=min(res[i],res[i-1])     
+    
+    return [i if i !=float('inf') else -1 for i in res]
+-------------------------------------------------------------------------
+
+Q3 SQL -----------------------------------
+SELECT
+    p.name AS name,
+    p.price AS price,
+    SUM(po.quantity) AS quantity,
+    SUM(po.quantity * o.total_price) AS total_price
+FROM products p LEFT JOIN
+    products_orders po ON p.id = po.product_id
+LEFT JOIN
+    (SELECT
+        po.product_id,
+        SUM(po.quantity * o.price) AS total_price
+    FROM products_orders po
+    JOIN orders o ON po.order_id = o.id
+    WHERE o.status = 'Completed'
+    GROUP BY po.product_id) o ON p.id = o.product_id
+GROUP BY p.name, p.price
+ORDER BY quantity DESC, total_price DESC;
+-----------------------------------
