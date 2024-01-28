@@ -9,11 +9,18 @@ Copyright (c) 2023-2024 Saurabh Zinjad. All rights reserved | https://github.com
 '''
 
 def findRepitationCount(short_s, long_s):
-    result = 0
     len_short_s = len(short_s)
+    if len_short_s == 0:
+        return 0
+    
+    len_long_s = len(long_s)
+    if len_long_s == 0:
+        return 0
+
+    result = 0
     
     i = 0
-    while i <= len(long_s)-len_short_s:
+    while i <= len_long_s-len_short_s:
         count = 0
         while long_s[i:i+len_short_s] == short_s:
             count += 1
