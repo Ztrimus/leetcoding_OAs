@@ -8,40 +8,13 @@ Copyright (c) 2023-2024 Saurabh Zinjad. All rights reserved | https://github.com
 -----------------------------------------------------------------------
 '''
 
+def countOrders(n):
+    """
+    :type n: int
+    :rtype: int
+    """
+    if n == 1:
+        return 1 
+    return n * (2*(n-1)+1) * countOrders(n-1) % (10**9 + 7)
 
-import math
-
-class MedianFinder(object):
-
-    def __init__(self):
-        self.arr = []
-        
-
-    def addNum(self, num):
-        """
-        :type num: int
-        :rtype: None
-        """
-        self.arr.append(num)
-        
-
-    def findMedian(self):
-        """
-        :rtype: float
-        """
-        len_arr = len(self.arr)
-        first = int(math.floor(len_arr/2))
-
-        if len_arr%2:
-            result = self.arr[first]
-        else:
-            result = (self.arr[first] + self.arr[first-1])/2
-        
-        return result
-        
-medianFinder = MedianFinder()
-medianFinder.addNum(1)
-medianFinder.addNum(2)
-print(medianFinder.findMedian())
-medianFinder.addNum(3)
-print(medianFinder.findMedian())
+print(countOrders(3))
