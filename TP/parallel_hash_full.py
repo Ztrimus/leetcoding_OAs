@@ -7,6 +7,11 @@ Developer Email: saurabhzinjad@gmail.com
 Copyright (c) 2023-2024 Saurabh Zinjad. All rights reserved | https://github.com/Ztrimus
 -----------------------------------------------------------------------
 '''
+
+# Run this script with the following command in the terminal:
+# parallel python3 parallel_hash_full.py {1} {2} ::: $(seq 0 100000 308915776) :::+ $(seq 100000 100000 308915776)
+# install parallel first
+
 import hashlib
 import itertools
 import string
