@@ -94,5 +94,7 @@ obj = Solution()
 
 for testcase in [
     ["abcabc", "abc", 10],
+    ["bcca", "abc", 1],
+    ["abcabc", "aaabc", 0]
 ]:
     print(f"word1: {testcase[0]}, word2: {testcase[1]}, expected: {testcase[2]} => {obj.validSubstringCount(testcase[0], testcase[1])}")
